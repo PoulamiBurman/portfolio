@@ -6,8 +6,28 @@ import { playHover, playClick } from '@/hooks/useSoundEffects';
 
 const projects = [
   {
-    title: 'TrueVex Technologies',
+    title: 'MAIL-MIND-AI',
     isNew: true,
+    description:
+      'A professional-grade, AI-powered email assistant that transforms your inbox into a dynamic command center by leveraging Gemma 2 27B and the Gmail API.',
+    tags: [
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'Mongoose',
+      'Gmail API',
+      'Gemma',
+      'Tailwind',
+      'Vite',
+      'Framer Motion',
+    ],
+    githubUrl: 'https://github.com/VARA4u-tech/MAIL-MIND-AI',
+    liveUrl: 'https://mail-mind-ai-xi.vercel.app/',
+  },
+  {
+    title: 'TrueVex Technologies',
+    isNew: false,
     description:
       'A premium software consultancy platform designed with a high-end, Brutalist-Modern aesthetic, focusing on immersive interactivity and pixel-perfect responsiveness.',
     tags: [

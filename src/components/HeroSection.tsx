@@ -269,7 +269,7 @@ const HeroSection = () => {
             'React',
             'TypeScript',
             'Firebase',
-            'Blockchain',
+            'AI',
             'Node.js',
           ].map((tech, i) => (
             <motion.span
@@ -344,7 +344,7 @@ const HeroSection = () => {
       >
         <div className="font-mono text-xs text-foreground text-right leading-relaxed font-medium">
           <p>const experience = "2+ years";</p>
-          <p>const projects = 10;</p>
+          <p>const projects = 11;</p>
           <p>const passion = Infinity;</p>
         </div>
       </motion.div>
