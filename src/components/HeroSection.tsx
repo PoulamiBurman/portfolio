@@ -100,11 +100,11 @@ const HeroSection = () => {
     }));
 
     dropObjects.forEach(drop => {
-      drop.speed = 1 + drop.depth * 2;
+      drop.speed = 1.5 + drop.depth * 3.5;
     });
 
     let lastFrameTime = 0;
-    const frameInterval = 50; 
+    const frameInterval = 30; 
     let animationId: number;
 
     const draw = (timestamp: number) => {
@@ -119,7 +119,7 @@ const HeroSection = () => {
       dropObjects.forEach((drop, i) => {
         const char = chars[Math.floor(Math.random() * chars.length)];
         const currentFontSize = fontSize * (0.5 + drop.depth * 0.7);
-        const opacity = 0.03 + drop.depth * 0.12;
+        const opacity = 0.05 + drop.depth * 0.25;
         
         ctx.font = `${currentFontSize}px monospace`;
         ctx.fillStyle = `rgba(0, 0, 0, ${opacity * 1.5})`;
@@ -173,7 +173,7 @@ const HeroSection = () => {
       <motion.canvas
         ref={canvasRef}
         style={{ y: y1 }}
-        className="absolute inset-0 z-0 pointer-events-none opacity-40"
+        className="absolute inset-0 z-0 pointer-events-none opacity-60"
         aria-hidden="true"
       />
 
