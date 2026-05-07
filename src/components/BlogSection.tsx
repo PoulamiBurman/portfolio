@@ -113,37 +113,43 @@ const BlogSection = () => {
             posts.map((post) => (
               <article
                 key={post.url}
-                className="group relative border-4 border-black bg-white p-4 flex flex-col transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 rounded-none"
+                className="group relative border-[3px] border-black bg-white p-6 flex flex-col transition-all duration-500 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-2 hover:-translate-y-2 rounded-none min-h-[520px]"
                 onMouseEnter={playHover}
               >
-                <div className="relative h-48 mb-4 overflow-hidden border-4 border-black rounded-none">
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-[10px] font-bold uppercase tracking-widest opacity-60">
+                    // ARTICLE
+                  </span>
+                  <div className="w-4 h-4 opacity-40">
+                    <BookOpen className="w-full h-full" />
+                  </div>
+                </div>
+
+                <div className="relative h-48 mb-6 overflow-hidden border-[3px] border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <img
                     src={post.coverImage.url}
                     alt={post.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-2 right-2 bg-black text-white p-2">
-                    <ArrowUpRight className="w-4 h-4" />
-                  </div>
                 </div>
 
-                <div className="flex items-center gap-2 mb-2">
-                  <Calendar className="w-3 h-3 text-black/50" />
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-black/50">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-[9px] font-black uppercase tracking-widest bg-black text-white px-2 py-0.5">
                     {new Date(post.publishedAt).toLocaleDateString(undefined, {
-                      year: 'numeric',
                       month: 'short',
                       day: 'numeric',
+                      year: 'numeric',
                     })}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-black mb-3 line-clamp-2 leading-tight group-hover:underline">
+                <h3 className="font-black italic text-foreground leading-tight text-xl uppercase mb-4 tracking-tighter line-clamp-2">
                   {post.title}
+                  <span className="inline-block w-3 h-[3px] bg-black ml-1 align-middle"></span>
                 </h3>
 
-                <p className="text-sm font-light text-black/70 mb-6 line-clamp-3 leading-relaxed">
+                <p className="body-text mb-8 font-medium leading-relaxed text-foreground/70 text-xs line-clamp-3">
                   {post.brief}
                 </p>
 
@@ -153,9 +159,10 @@ const BlogSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={playClick}
-                    className="inline-flex items-center justify-center w-full py-3 border-2 border-black bg-white text-black text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:bg-black hover:text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-y-0 active:translate-y-[2px] rounded-none"
+                    className="w-full flex items-center justify-between px-6 py-4 border-2 border-black bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 relative shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] hover:-translate-x-[4px] hover:-translate-y-[4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
                   >
-                    Read Full Post
+                    READ FULL ARTICLE
+                    <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
               </article>
