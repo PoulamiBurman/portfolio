@@ -113,7 +113,7 @@ const BlogSection = () => {
             posts.map((post) => (
               <article
                 key={post.url}
-                className="group relative border-[3px] border-black bg-white p-6 flex flex-col transition-all duration-500 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-2 hover:-translate-y-2 rounded-none min-h-[520px]"
+                className="group relative border-[3px] border-black bg-white p-6 flex flex-col transition-all duration-500 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-2 hover:-translate-y-2 rounded-none min-h-[380px]"
                 onMouseEnter={playHover}
               >
                 <div className="flex justify-between items-center mb-6">
@@ -123,15 +123,6 @@ const BlogSection = () => {
                   <div className="w-4 h-4 opacity-40">
                     <BookOpen className="w-full h-full" />
                   </div>
-                </div>
-
-                <div className="relative h-48 mb-6 overflow-hidden border-[3px] border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-gray-200">
-                  <img
-                    src={post.coverImage.url}
-                    alt={post.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover grayscale brightness-110 contrast-125 transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
-                  />
                 </div>
 
                 <div className="flex items-center gap-2 mb-4">
