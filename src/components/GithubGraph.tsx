@@ -14,7 +14,7 @@ const GithubGraph = () => {
       >
         <GraphContent />
       </TiltCard>
-      
+
       {/* Static version for mobile/tablet without tilt for stability */}
       <div className="md:hidden w-full">
         <GraphContent isMobile />
@@ -37,7 +37,7 @@ const GraphContent = ({ isMobile }: { isMobile?: boolean }) => (
         Synced with GitHub Server
       </div>
     </div>
-    
+
     <div className="relative group/scroll">
       <div className="flex justify-start md:justify-center overflow-x-auto pb-4 scrollbar-hide snap-x cursor-grab active:cursor-grabbing">
         <div className="min-w-[600px] md:min-w-0 transition-transform">
@@ -56,7 +56,7 @@ const GraphContent = ({ isMobile }: { isMobile?: boolean }) => (
           />
         </div>
       </div>
-      
+
       {/* Mobile Scroll Hint */}
       <div className="md:hidden flex items-center justify-center gap-2 mt-2 text-[10px] font-mono text-black/40 uppercase">
         <span>← Swipe to view →</span>
@@ -68,9 +68,7 @@ const GraphContent = ({ isMobile }: { isMobile?: boolean }) => (
         <span>Total Contributions:</span>
         <span className="font-black text-black">1.2K+</span>
       </div>
-      <div className="hidden sm:block">
-        // Real-time contributions
-      </div>
+      <div className="hidden sm:block">// Real-time contributions</div>
     </div>
   </div>
 );

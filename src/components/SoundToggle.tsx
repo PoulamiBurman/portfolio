@@ -3,7 +3,8 @@ import { Volume2, VolumeX } from 'lucide-react';
 import useSoundEffects from '@/hooks/useSoundEffects';
 
 const SoundToggle = () => {
-  const { setMasterVolume, getMasterVolume, playClick, playHover } = useSoundEffects();
+  const { setMasterVolume, getMasterVolume, playClick, playHover } =
+    useSoundEffects();
   const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {

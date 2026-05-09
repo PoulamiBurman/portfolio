@@ -13,11 +13,14 @@ const SectionBlock = ({ id, title, children }: SectionBlockProps) => {
       id={id}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number] }}
+      viewport={{ once: false, margin: '-100px' }}
+      transition={{
+        duration: 0.8,
+        ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number],
+      }}
       className="max-w-6xl mx-auto px-6 py-16 md:py-32"
     >
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false }}

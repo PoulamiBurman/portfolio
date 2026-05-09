@@ -14,18 +14,18 @@ The project has **no backend** — it is a purely static, client-side React appl
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | React 18 + TypeScript |
-| Bundler | Vite 5 (with SWC plugin) |
-| Styling | Tailwind CSS 3 + CSS variables |
-| Component Library | shadcn/ui (Radix UI primitives) |
-| Routing | React Router DOM v6 |
-| Server State | TanStack React Query v5 |
-| Forms | React Hook Form + Zod |
-| Icons | Lucide React |
-| Testing | Vitest + Testing Library + jsdom |
-| Package Manager | npm (also has `bun.lockb` — either works) |
+| Layer             | Technology                                |
+| ----------------- | ----------------------------------------- |
+| Framework         | React 18 + TypeScript                     |
+| Bundler           | Vite 5 (with SWC plugin)                  |
+| Styling           | Tailwind CSS 3 + CSS variables            |
+| Component Library | shadcn/ui (Radix UI primitives)           |
+| Routing           | React Router DOM v6                       |
+| Server State      | TanStack React Query v5                   |
+| Forms             | React Hook Form + Zod                     |
+| Icons             | Lucide React                              |
+| Testing           | Vitest + Testing Library + jsdom          |
+| Package Manager   | npm (also has `bun.lockb` — either works) |
 
 ---
 
@@ -103,10 +103,12 @@ npm run test:watch   # Run tests in watch mode
 ## Key Conventions
 
 ### Imports
+
 - Always use the `@/` path alias for src imports: `import { cn } from "@/lib/utils"`
 - shadcn/ui components live in `@/components/ui/` — do not import from `radix-ui` directly
 
 ### Styling
+
 - Use **Tailwind utility classes** as the primary styling method
 - For theme-aware colors, use CSS variables: `bg-background`, `text-foreground`, `text-primary`, etc.
 - Custom utility classes are defined in `src/index.css`: `heading-brutal`, `section-title`, `body-text`, `nav-link`
@@ -114,23 +116,27 @@ npm run test:watch   # Run tests in watch mode
 - Animations: prefer CSS keyframes (defined in `index.css`) or `tailwindcss-animate` utilities over inline styles
 
 ### Components
+
 - Feature/section components belong in `src/components/`
 - Reusable UI primitives (buttons, inputs, dialogs) belong in `src/components/ui/` and should be generated via `npx shadcn@latest add <component>`
 - Wrap new portfolio sections with `<SectionBlock>` to get consistent fade-in scroll animation and spacing
 - Keep components self-contained; avoid prop-drilling beyond 2 levels
 
 ### TypeScript
+
 - TypeScript `strict` mode is **off** (`tsconfig.json`); type annotations are pragmatic, not exhaustive
 - Zod is available for runtime schema validation (used in forms)
 - Do not add type annotations to files you are not otherwise modifying
 
 ### State Management
+
 - Local component state: `useState` / `useReducer`
 - Server/async state: `TanStack React Query` (`useQuery`, `useMutation`)
 - Global UI state: React Context (e.g., `TooltipProvider`)
 - No Redux or Zustand — keep state lightweight
 
 ### Testing
+
 - Tests live in `src/test/` or co-located as `*.test.tsx` / `*.spec.tsx`
 - Use Vitest globals (`describe`, `it`, `expect`) — no imports needed
 - `@testing-library/react` is available for component rendering
@@ -141,35 +147,41 @@ npm run test:watch   # Run tests in watch mode
 ## Important Implementation Details
 
 ### HeroSection — Matrix Rain
+
 The canvas-based matrix animation in `HeroSection.tsx` uses `requestAnimationFrame`. When modifying this component, be careful not to introduce memory leaks — the animation loop must be cancelled in the `useEffect` cleanup.
 
 ### Terminal Component (`Ctrl+K`)
+
 `Terminal.tsx` handles a global keyboard shortcut (`Ctrl+K`) for opening/closing. It has an internal command registry. To add a new command, add an entry to the command handler inside the component.
 
 ### SectionBlock — Scroll Animations
+
 `SectionBlock.tsx` uses `IntersectionObserver` to trigger fade-in animations. Any new portfolio section should be wrapped in `<SectionBlock>` for visual consistency.
 
 ### Contact / WhatsApp Integration
+
 `ContactSection.tsx` constructs a WhatsApp deep link from the form fields. Phone number and email are **hardcoded** in the component — update them there directly if they change.
 
 ### GitHub Graph
+
 `GithubGraph.tsx` uses `react-github-calendar` with the username `VARA4u-tech`. Update the username prop directly in that file if the GitHub account changes.
 
 ### No Environment Variables
+
 There are currently **no `.env` files** and no runtime environment variables. All configuration (social links, contact info, GitHub username) is hardcoded in component files.
 
 ---
 
 ## Architectural Patterns
 
-| Pattern | Where Used |
-|---|---|
-| Composition via `SectionBlock` | All portfolio sections |
-| Custom hooks for browser APIs | `use-mobile`, `use-toast` |
-| `cn()` for conditional classes | Every component |
-| Canvas-based animation | `HeroSection.tsx` |
-| Intersection Observer | `SectionBlock.tsx` |
-| React Query | `App.tsx` (provider ready, hooks available) |
+| Pattern                        | Where Used                                  |
+| ------------------------------ | ------------------------------------------- |
+| Composition via `SectionBlock` | All portfolio sections                      |
+| Custom hooks for browser APIs  | `use-mobile`, `use-toast`                   |
+| `cn()` for conditional classes | Every component                             |
+| Canvas-based animation         | `HeroSection.tsx`                           |
+| Intersection Observer          | `SectionBlock.tsx`                          |
+| React Query                    | `App.tsx` (provider ready, hooks available) |
 
 ---
 

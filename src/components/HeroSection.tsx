@@ -342,7 +342,7 @@ const HeroSection = () => {
         className="absolute bottom-10 right-6 md:right-10 z-10 hidden md:block"
       >
         <div className="font-mono text-xs text-foreground text-right leading-relaxed font-medium">
-          <p>const experience = "2+ years";</p>
+          <p>const experience = "1+ years";</p>
           <p>const projects = 11;</p>
           <p>const passion = Infinity;</p>
         </div>

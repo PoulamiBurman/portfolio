@@ -1,14 +1,19 @@
-import { motion, type Variants } from "framer-motion";
+import { motion, type Variants } from 'framer-motion';
 
 interface Props {
   text: string;
   className?: string;
   delay?: number;
-  as?: "h1" | "h2" | "h3" | "h4" | "p" | "span";
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span';
 }
 
-export const TextReveal = ({ text, className = "", delay = 0, as: Component = "h2" }: Props) => {
-  const words = text.split(" ");
+export const TextReveal = ({
+  text,
+  className = '',
+  delay = 0,
+  as: Component = 'h2',
+}: Props) => {
+  const words = text.split(' ');
 
   const container: Variants = {
     hidden: { opacity: 0 },
@@ -23,7 +28,7 @@ export const TextReveal = ({ text, className = "", delay = 0, as: Component = "h
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -32,7 +37,7 @@ export const TextReveal = ({ text, className = "", delay = 0, as: Component = "h
       opacity: 0,
       y: 20,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -41,7 +46,7 @@ export const TextReveal = ({ text, className = "", delay = 0, as: Component = "h
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", flexWrap: "wrap" }}
+      style={{ overflow: 'hidden', display: 'flex', flexWrap: 'wrap' }}
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -51,7 +56,7 @@ export const TextReveal = ({ text, className = "", delay = 0, as: Component = "h
       {words.map((word, index) => (
         <motion.span
           variants={child}
-          style={{ marginRight: "0.25em" }}
+          style={{ marginRight: '0.25em' }}
           key={index}
           className="inline-block"
         >

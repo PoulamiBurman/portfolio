@@ -43,7 +43,7 @@ const TiltCard: React.FC<TiltCardProps> = ({
       setTilt({ x: rotateX, y: rotateY });
       setGlare({ x: glareX, y: glareY });
     },
-    [maxTilt]
+    [maxTilt],
   );
 
   const handleMouseEnter = () => {
