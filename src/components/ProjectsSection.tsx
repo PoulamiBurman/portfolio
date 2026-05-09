@@ -25,23 +25,7 @@ const projects = [
     githubUrl: 'https://github.com/VARA4u-tech/MAIL-MIND-AI',
     liveUrl: 'https://mail-mind-ai-xi.vercel.app/',
   },
-  {
-    title: 'TrueVex Technologies',
-    isNew: false,
-    description:
-      'A premium software consultancy platform designed with a high-end, Brutalist-Modern aesthetic, focusing on immersive interactivity and pixel-perfect responsiveness.',
-    tags: [
-      'React',
-      'TypeScript',
-      'Tailwind',
-      'Framer Motion',
-      'GSAP',
-      'TanStack Router',
-      'Vite',
-    ],
-    githubUrl: 'https://github.com/VARA4u-tech/true-vex-tech',
-    liveUrl: 'https://truevextechnologies.netlify.app/',
-  },
+
   {
     title: 'Vidyalaya',
     isNew: false,
