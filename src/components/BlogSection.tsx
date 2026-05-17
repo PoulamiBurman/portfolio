@@ -17,6 +17,40 @@ interface BlogPostEdge {
   node: BlogPost;
 }
 
+const FALLBACK_POSTS: BlogPost[] = [
+  {
+    title:
+      'Building Mail-Mind-AI: Transforming Inbox Productivity with Gemma 2 and Gmail API',
+    brief:
+      'A deep dive into how I leveraged Gemma 2 27B and the Gmail API to build a professional-grade, AI-powered email assistant that automatically categorizes and drafts responses.',
+    url: 'https://durgavaraprasad.hashnode.dev/building-mail-mind-ai',
+    coverImage: {
+      url: '',
+    },
+    publishedAt: '2026-04-15T00:00:00.000Z',
+  },
+  {
+    title: 'Designing Vidyalaya AI: How we Built a PDF-to-Study Platform',
+    brief:
+      'An architectural walkthrough of Vidyalaya AI, a modern study helper that translates textbooks and lecture notes into customized study guides and quizzes using vector searches.',
+    url: 'https://durgavaraprasad.hashnode.dev/designing-vidyalaya-ai',
+    coverImage: {
+      url: '',
+    },
+    publishedAt: '2026-03-22T00:00:00.000Z',
+  },
+  {
+    title: 'Optimizing React State and Animations for Neobrutalist UI/UX',
+    brief:
+      'Explaining the engineering choices behind high-performance animations, sound effects, and state management in neobrutalist and glassmorphic designs.',
+    url: 'https://durgavaraprasad.hashnode.dev/optimizing-react-state-neobrutalist-ui',
+    coverImage: {
+      url: '',
+    },
+    publishedAt: '2026-02-10T00:00:00.000Z',
+  },
+];
+
 const BlogSection = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -46,7 +80,7 @@ const BlogSection = () => {
           }
         `;
 
-      const response = await fetch('https://gql.hashnode.com/', {
+      const response = await fetch('https://gql.hashnode.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,8 +92,12 @@ const BlogSection = () => {
       const postEdges = result.data.publication.posts.edges as BlogPostEdge[];
       setPosts(postEdges.map((edge) => edge.node));
     } catch (err) {
-      console.error('Error fetching Hashnode posts:', err);
-      setError(true);
+      console.warn(
+        'Error fetching Hashnode posts, falling back to static posts:',
+        err,
+      );
+      setPosts(FALLBACK_POSTS);
+      setError(false);
     } finally {
       setLoading(false);
     }
