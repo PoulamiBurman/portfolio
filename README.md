@@ -110,7 +110,7 @@ sequenceDiagram
     participant CLI as Terminal CLI
     participant Projects as Project Grid
     participant Contact as Contact System
-    
+
     Recruiter->>Hero: Lands on Page
     Hero-->>Recruiter: High-Tech Visual Hook
     Recruiter->>CLI: Executes 'help' / 'projects'
