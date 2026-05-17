@@ -9,6 +9,7 @@ const links = [
   { label: 'Experience', href: '#experience' },
   { label: 'Work', href: '#projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -36,7 +37,9 @@ const Navbar = () => {
                 {link.label}
               </a>
               {i < links.length - 1 && (
-                <span className="text-foreground/20 text-xs">|</span>
+                <span className="text-foreground/60 font-bold mx-1.5 text-xs select-none">
+                  |
+                </span>
               )}
             </span>
           ))}
