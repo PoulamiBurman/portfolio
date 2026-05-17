@@ -6,8 +6,28 @@ import { playHover, playClick } from '@/hooks/useSoundEffects';
 
 const projects = [
   {
-    title: 'MAIL-MIND-AI',
+    title: 'AI Meeting Summarizer & Task Manager',
     isNew: true,
+    description:
+      'An enterprise-grade AI assistant that automatically transcribes meeting audio, extracts high-value action items, and generates dynamic task boards for seamless workflow tracking.',
+    tags: [
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Gemini AI',
+      'Tailwind',
+      'Vite',
+      'Framer Motion',
+    ],
+    githubUrl:
+      'https://github.com/VARA4u-tech/AI_Meeting_Summerizer_Task_Manager',
+    liveUrl: 'https://ai-meeting-summerizer-task-manager.vercel.app',
+  },
+  {
+    title: 'MAIL-MIND-AI',
+    isNew: false,
     description:
       'A professional-grade, AI-powered email assistant that transforms your inbox into a dynamic command center by leveraging Gemma 2 27B and the Gmail API.',
     tags: [
