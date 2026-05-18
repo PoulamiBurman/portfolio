@@ -1,17 +1,8 @@
-# 🚀 Durga Vara Prasad's Professional Engineering Portfolio
+# 🚀 Poulami Burman's Professional Engineering Portfolio
 
 **A High-Performance, Neo-Brutalist Digital Identity & Engineering Showcase**
 
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![ShadcnUI](https://img.shields.io/badge/Shadcn_UI-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 
-[**Live Demo**](https://vara-s-portfolio.vercel.app/) • [**Source Code**](https://github.com/VARA4u-tech/Vara-s--Portfolio) • [**Request Collaboration**](mailto:pappuridurgavaraprasad4pl@gmail.com)
-
----
 
 ## 📌 Project Overview
 
@@ -158,14 +149,6 @@ src/
 
 ---
 
-## 📊 Engineering Decisions
-
-- **Why Vite?**: We chose Vite over CRA to achieve near-instant server starts and optimized production bundles.
-- **Why Neo-Brutalism?**: To stand out from generic "Material Design" portfolios, using bold strokes, high contrast, and raw layouts to convey confidence.
-- **Scalability**: All data is centralized in `src/data/constants.ts`, allowing for profile updates in seconds without touching component logic.
-- **Accessibility (a11y)**: Semantic HTML and proper ARIA labels used throughout the Terminal and forms.
-
----
 
 ## 🧪 Testing & Validation
 
