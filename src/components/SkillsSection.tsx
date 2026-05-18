@@ -1,71 +1,68 @@
 import { motion } from 'framer-motion';
 import {
   Code2,
-  Smartphone,
+  Brain,
   Server,
   Cpu,
   Wrench,
-  Zap,
-  Layers,
   Box,
 } from 'lucide-react';
 import SectionBlock from './SectionBlock';
-import GithubGraph from './GithubGraph';
 import { playHover } from '@/hooks/useSoundEffects';
 
 const skillCategories = [
   {
-    title: 'Frontend Development',
-    icon: <Code2 className="w-5 h-5" />,
-    color: 'bg-blue-50',
-    skills: [
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'Tailwind CSS',
-      'Zustand',
-      'TanStack Query',
-      'Framer Motion',
-      'Shadcn UI',
-      'Vite',
-    ],
-  },
-  {
-    title: 'Mobile Engineering',
-    icon: <Smartphone className="w-5 h-5" />,
-    color: 'bg-green-50',
-    skills: [
-      'Riverpod',
-      'Material Design',
-      'Mobile UI/UX',
-      'Native Integration',
-    ],
-  },
-  {
-    title: 'Backend & Database',
-    icon: <Server className="w-5 h-5" />,
-    color: 'bg-orange-50',
-    skills: [
-      'Node.js',
-      'Firebase',
-      'MongoDB',
-      'Hive',
-      'REST APIs',
-      'PostgreSQL',
-      'Auth Systems',
-    ],
-  },
-  {
-    title: 'Web3 & Intelligence',
-    icon: <Cpu className="w-5 h-5" />,
+    title: 'Machine Learning & NLP',
+    icon: <Brain className="w-5 h-5" />,
     color: 'bg-purple-50',
     skills: [
-      'Aptos',
-      'Move Lang',
-      'AI Integration',
-      'Prompt Engineering',
-      'Smart Contracts',
-      'Web3.js',
+      'PyTorch',
+      'Transformers (HuggingFace)',
+      'LLMs',
+      'NLP',
+      'Deep Learning',
+      'LangChain',
+      'Pinecone',
+      'RAG',
+    ],
+  },
+  {
+    title: 'Languages',
+    icon: <Code2 className="w-5 h-5" />,
+    color: 'bg-blue-50',
+    skills: ['Python', 'C++', 'Java', 'C'],
+  },
+  {
+    title: 'Core CS',
+    icon: <Cpu className="w-5 h-5" />,
+    color: 'bg-orange-50',
+    skills: [
+      'Data Structures & Algorithms',
+      'OOP',
+      'Operating Systems',
+      'DBMS',
+      'Computer Networks',
+    ],
+  },
+  {
+    title: 'Frontend',
+    icon: <Code2 className="w-5 h-5" />,
+    color: 'bg-green-50',
+    skills: ['React', 'Next.js', 'HTML', 'CSS', 'Bootstrap', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend & Databases',
+    icon: <Server className="w-5 h-5" />,
+    color: 'bg-yellow-50',
+    skills: [
+      'Node.js',
+      'Express.js',
+      'Flask',
+      'Django',
+      'MongoDB',
+      'MySQL',
+      'PostgreSQL',
+      'REST APIs',
     ],
   },
   {
@@ -75,12 +72,12 @@ const skillCategories = [
     skills: [
       'Git',
       'GitHub',
+      'Linux',
       'Figma',
-      'Vitest',
-      'Vercel',
-      'Docker',
-      'Postman',
-      'Linux CLI',
+      'Hugging Face',
+      'Kiro',
+      'Windsurf',
+      'Gemini API',
     ],
   },
 ];
@@ -100,7 +97,7 @@ const SkillsSection = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {skillCategories.map((category, idx) => (
+          {skillCategories.map((category) => (
             <motion.div
               key={category.title}
               variants={{
@@ -135,7 +132,7 @@ const SkillsSection = () => {
             </motion.div>
           ))}
 
-          {/* Final "Load" Card */}
+          {/* Always Learning Card */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -153,20 +150,6 @@ const SkillsSection = () => {
             </div>
           </motion.div>
         </motion.div>
-
-        {/* Activity Section */}
-        <div className="w-full pt-12 border-t-4 border-black border-dashed">
-          <div className="flex flex-col gap-8">
-            <div className="flex items-center gap-4">
-              <h3 className="text-sm font-mono font-bold uppercase tracking-[0.2em] flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-none animate-pulse" />
-                Live Pulse
-              </h3>
-              <div className="h-[2px] flex-1 bg-black/10"></div>
-            </div>
-            <GithubGraph />
-          </div>
-        </div>
       </div>
     </SectionBlock>
   );

@@ -39,7 +39,7 @@ const Terminal = () => {
       type: 'response',
       content: (
         <div className="mb-2">
-          <p>Welcome to Vara's Portfolio Terminal v1.0.0</p>
+          <p>Welcome to Poulami's Portfolio Terminal v1.0.0</p>
           <p>
             I am a conversational AI. Type{' '}
             <span className="text-green-400">help</span> for commands, or just
@@ -127,7 +127,7 @@ const Terminal = () => {
             </div>
           );
         case 'cat readme.md':
-          return "Vara's Portfolio v1.0.0. Built with React, TypeScript, and a reckless amount of neobrutalism.";
+          return "Poulami's Portfolio v1.0.0. Built with React, TypeScript, and a reckless amount of neobrutalism.";
         case 'cat experience.txt':
           return 'Freelance Developer @ AOTMS. Built scalable transport systems and loved every second of it.';
         case 'cat education.txt':
@@ -214,7 +214,7 @@ const Terminal = () => {
 
       // Greeting
       if (lower.match(/^(hi|hello|hey|greetings)/)) {
-        return "Hello! I'm Vara's virtual assistant. How can I help you today?";
+        return "Hello! I'm Poulami's virtual assistant. How can I help you today?";
       }
 
       // About

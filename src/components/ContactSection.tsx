@@ -7,8 +7,6 @@ import {
   Check,
   Github,
   Linkedin,
-  InstagramIcon,
-  BookOpen,
   Send,
   LucideGlobe2,
 } from 'lucide-react';
@@ -17,8 +15,6 @@ import { PROFILE, SOCIAL_LINKS } from '@/data/constants';
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   github: Github,
   linkedin: Linkedin,
-  instagram: InstagramIcon,
-  blog: BookOpen,
 };
 
 const contactSocials = SOCIAL_LINKS.filter((l) => l.id !== 'email');
@@ -30,10 +26,9 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     playSuccess();
-    const telegramNumber = PROFILE.phone;
-    const text = `Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`;
-    const encodedText = encodeURIComponent(text);
-    window.open(`https://t.me/${telegramNumber}?text=${encodedText}`, '_blank');
+    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`);
+    window.open(`mailto:${PROFILE.email}?subject=${subject}&body=${body}`, '_blank');
   };
 
   const copyEmail = () => {
@@ -49,9 +44,9 @@ const ContactSection = () => {
         {/* Left Column: Contact Info */}
         <div className="space-y-8 md:space-y-10">
           <p className="text-foreground/80 leading-relaxed font-light text-lg">
-            I'm always interested in hearing about new projects and
-            opportunities. Whether you have a question or just want to say hi,
-            feel free to drop a message.
+            I'm always open to internship opportunities, research collaborations,
+            and interesting projects. Whether you have a question or just want to
+            say hi, feel free to drop a message.
           </p>
 
           <div className="space-y-6">
@@ -87,7 +82,7 @@ const ContactSection = () => {
                 <p className="text-xs uppercase tracking-widest text-foreground/50 mb-1">
                   Current Status
                 </p>
-                <p className="font-mono text-sm">AVAILABLE_FOR_PROJECTS</p>
+                <p className="font-mono text-sm">OPEN_TO_OPPORTUNITIES</p>
               </div>
             </div>
           </div>
@@ -179,9 +174,9 @@ const ContactSection = () => {
             onClick={playClick}
             className="w-full group relative flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-mono uppercase tracking-widest overflow-hidden transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.5)] hover:-translate-y-1 active:scale-95 active:shadow-none touch-manipulation rounded-none"
           >
-            <span className="relative z-10 font-bold">Send via Telegram</span>
+            <span className="relative z-10 font-bold">Send Message</span>
             <Send className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-            <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            <div className="absolute inset-0 bg-black/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
         </form>
       </div>

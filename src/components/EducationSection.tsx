@@ -2,16 +2,19 @@ import SectionBlock from './SectionBlock';
 
 const education = [
   {
-    degree:
-      'Master of Computer Applications (MCA), DVR & Dr. HS MIC College of Technology (Autonomous),Kanchikacherla',
-    school: 'Jawaharlal Nehru Technological University Kakinada',
-    year: '2024 – 2026(Pursuing)',
+    degree: 'B.Tech – Computer Science, Minor – Entrepreneurship',
+    school: 'Manipal Institute of Technology [MIT], Udupi, India',
+    year: '2023 – 2027 (Expected)',
   },
   {
-    degree:
-      'Bachelor of Science (B.Sc-MSCs), Gowtham Degree College,Vijayawada',
-    school: 'Krishna University',
-    year: '2021 – 2024',
+    degree: 'Class XII – 82%',
+    school: 'Loyola High School, Patna (CBSE)',
+    year: '2023',
+  },
+  {
+    degree: 'Class X – 93%',
+    school: 'Carmel High School, Patna (ICSE)',
+    year: '2021',
   },
 ];
 

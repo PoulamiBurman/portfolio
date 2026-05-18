@@ -6,24 +6,20 @@ import {
   Linkedin,
   Mail,
   ChevronDown,
-  InstagramIcon,
-  BookOpen,
 } from 'lucide-react';
 import Magnetic from './Magnetic';
 import { PROFILE, SOCIAL_LINKS } from '@/data/constants';
 
 const roles = [
-  'Vibe Coder',
-  'React Engineer',
-  'Blockchain Builder',
-  'Full-Stack Creator',
+  'ML Engineer',
+  'Full-Stack Builder',
+  'NLP Enthusiast',
+  'CS @ MIT Manipal',
 ];
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   github: Github,
   linkedin: Linkedin,
-  instagram: InstagramIcon,
-  blog: BookOpen,
   email: Mail,
 };
 
@@ -228,12 +224,12 @@ const HeroSection = () => {
           className="heading-brutal leading-[0.85]"
           style={{ fontSize: 'clamp(65px, 13vw, 140px)' }}
         >
-          <div className="glitch-text" data-text="Durga Vara">
-            Durga Vara
+          <div className="glitch-text" data-text="Poulami">
+            Poulami
           </div>
           <br />
-          <div className="glitch-text" data-text="Prasad.">
-            <span className="text-foreground/20">Prasad.</span>
+          <div className="glitch-text" data-text="Burman.">
+            <span className="text-foreground/20">Burman.</span>
           </div>
         </motion.h1>
 
@@ -265,7 +261,7 @@ const HeroSection = () => {
           variants={itemVariants}
           className="flex flex-wrap gap-2 justify-center mt-8 max-w-md mx-auto"
         >
-          {['Flutter', 'React', 'TypeScript', 'Firebase', 'AI', 'Node.js'].map(
+          {['Python', 'PyTorch', 'React', 'LangChain', 'Node.js', 'NLP'].map(
             (tech, i) => (
               <motion.span
                 key={tech}
@@ -311,7 +307,7 @@ const HeroSection = () => {
           <Magnetic strength={0.1}>
             <a
               href="/resume.pdf"
-              download="Durga_Vara_Prasad_Resume.pdf"
+              download="Poulami_Burman_Resume.pdf"
               onClick={playClick}
               className="group relative inline-flex items-center gap-2 px-8 py-4 border-2 border-black bg-black text-white text-sm font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:bg-white hover:text-black hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rounded-none"
             >
@@ -342,8 +338,8 @@ const HeroSection = () => {
         className="absolute bottom-10 right-6 md:right-10 z-10 hidden md:block"
       >
         <div className="font-mono text-xs text-foreground text-right leading-relaxed font-medium">
-          <p>const experience = "1+ years";</p>
-          <p>const projects = 11;</p>
+          <p>const year = "3rd Year CS";</p>
+          <p>const projects = 3;</p>
           <p>const passion = Infinity;</p>
         </div>
       </motion.div>

@@ -3,41 +3,31 @@
 // ──────────────────────────────────────
 
 export const PROFILE = {
-  name: 'Pappuri Durga Vara Prasad',
-  shortName: 'Durga Vara Prasad',
-  alias: 'Vara',
-  title: 'Full Stack Developer',
-  email: 'pappuridurgavaraprasad4pl@gmail.com',
-  phone: '+919550533315',
-  website: 'www.prasad.dev',
-  blogHost: 'durgavaraprasad.hashnode.dev',
+  name: 'Poulami Burman',
+  shortName: 'Poulami Burman',
+  alias: 'Poulami',
+  title: 'CS Student & Builder',
+  email: 'burmanpoulami05@gmail.com',
+  phone: '',
+  website: 'github.com/PoulamiBurman',
+  blogHost: '',
 } as const;
 
 export const SOCIAL_LINKS = [
   {
     id: 'github',
     label: 'GitHub',
-    href: 'https://github.com/VARA4u-tech',
+    href: 'https://github.com/PoulamiBurman',
   },
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/durga-vara-prasad-pappuri-1797701b6/',
-  },
-  {
-    id: 'instagram',
-    label: 'Instagram',
-    href: 'https://www.instagram.com/d_v_p6/',
-  },
-  {
-    id: 'blog',
-    label: 'Blog',
-    href: 'https://durgavaraprasad.hashnode.dev/',
+    href: 'https://linkedin.com/in/poulami-burman',
   },
   {
     id: 'email',
     label: 'Email',
-    href: 'mailto:pappuridurgavaraprasad4pl@gmail.com',
+    href: 'mailto:burmanpoulami05@gmail.com',
   },
 ] as const;
 

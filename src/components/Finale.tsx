@@ -1,10 +1,8 @@
 import {
   Github,
   Linkedin,
-  InstagramIcon,
   Mail,
   Heart,
-  BookOpen,
 } from 'lucide-react';
 import { PROFILE, SOCIAL_LINKS } from '@/data/constants';
 
@@ -12,8 +10,6 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   github: Github,
   linkedin: Linkedin,
   email: Mail,
-  instagram: InstagramIcon,
-  blog: BookOpen,
 };
 
 const Finale = () => {
@@ -21,9 +17,9 @@ const Finale = () => {
 
   const marqueeTags = [
     `${PROFILE.shortName} 🚀`,
-    'Full Stack Dev | Supabase | React | Blockchain | AI',
-    'Designing clean UI/UX + Smart solutions🔖',
-    'Exploring tech through Vibe Coding',
+    'ML Engineer | Full-Stack | NLP | Deep Learning',
+    'Building meaningful AI-powered experiences 🔖',
+    'CS @ MIT Manipal · President ArtPod · Builder',
   ];
 
   return (
@@ -87,11 +83,11 @@ const Finale = () => {
           <div className="flex items-center gap-2 px-4 py-2 bg-green-100 border-2 border-green-600 rounded-none">
             <span className="inline-block w-1.5 h-1.5 bg-green-400 rounded-none mr-1.5 animate-pulse" />
             <span className="text-[10px] font-black uppercase tracking-widest text-green-800">
-              Available for Freelance Projects
+              Open to Internships & Collaborations
             </span>
           </div>
           <p className="text-xs font-mono text-black/70 uppercase tracking-widest leading-loose max-w-sm">
-            Driving Digital Innovation & Building Scalable Tech Products 🌍
+            Building at the intersection of AI, software & creativity 🌍
           </p>
         </div>
       </div>

@@ -2,11 +2,25 @@ import SectionBlock from './SectionBlock';
 
 const experiences = [
   {
-    role: 'MERN Stack Developer (Freelance)',
-    company: 'Academy of Tech Masters (AOTMS)',
-    period: '[23DEC 2025 – 23JAN 2026]',
+    role: 'President',
+    company: 'ArtPod, MIT Manipal',
+    period: '[AUG 2025 – PRESENT]',
     description:
-      '🚀Freelance Project – Successfully Delivered Completed a real-world client project with my team using [Tech Stack – e.g., React, Node.js, MongoDB]. Key learnings: 🔹 Building scalable features 🔹 Team collaboration & Git workflows 🔹 Meeting client expectations & deadlines.',
+      'Directed a team of 100+ members, overseeing 10+ events with 150+ student participants. Led digital outreach and brand campaigns to grow event visibility across platforms. Established structured workflows for event planning and execution, improving team efficiency and coordination.',
+  },
+  {
+    role: 'Marketing Head',
+    company: 'Yaanbarpe',
+    period: '[2025 – PRESENT]',
+    description:
+      'Leading marketing strategy for a growing startup, driving user acquisition and brand visibility. Designed and executed digital campaigns, optimizing engagement and conversion metrics. Collaborating with cross-functional teams to align product positioning with customer needs.',
+  },
+  {
+    role: 'Executive',
+    company: 'E-Cell, MIT Manipal',
+    period: '[SEPT 2024 – MAY 2025]',
+    description:
+      'Coordinated the Manipal Entrepreneurship Summit 2025 (speakers: Dr. Velumani, Raj Shamani, Ashneer Grover), managing partnerships, sponsorships, logistics, and end-to-end marketing strategy spanning content, social media, and brand positioning. Crafted targeted outreach communication and pitch decks, coordinating with external stakeholders and internal teams to align on deliverables and timelines.',
   },
 ];
 
