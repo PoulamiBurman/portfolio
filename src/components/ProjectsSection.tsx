@@ -12,7 +12,7 @@ const projects = [
     description:
       'Full-stack web app enabling users to scan cosmetic barcodes and receive instant sustainability ratings, integrating Open Beauty Facts and EWG APIs to evaluate 50,000+ product entries in real-time. Serverless Next.js API layer on Vercel reduces analysis response time to under 1.2 seconds.',
     tags: ['Next.js', 'React', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Vercel'],
-    githubUrl: 'https://github.com/PoulamiBurman',
+    githubUrl: 'https://github.com/PoulamiBurman/PurePick',
     liveUrl: '#',
     placeholder: false,
   },
@@ -23,7 +23,7 @@ const projects = [
     description:
       'RAG-based chatbot using LangChain and Pinecone vector store, ingesting 500+ medical documents for semantically accurate patient health responses. Integrated Gemini-2.5 with a custom prompt-safety layer achieving 87% response relevance across 200 test prompts.',
     tags: ['Python', 'LangChain', 'Flask', 'Gemini API', 'Pinecone', 'RAG'],
-    githubUrl: 'https://github.com/PoulamiBurman',
+    githubUrl: 'https://github.com/PoulamiBurman/Medical-Chatbot.git',
     liveUrl: '#',
     placeholder: false,
   },
@@ -34,7 +34,7 @@ const projects = [
     description:
       'CNN-based image processing pipeline using PyTorch for face recognition and extraction. Integrated OpenCV preprocessing with filtering and edge detection to improve input quality. Designed ROI-based processing to enhance efficiency and reduce computation.',
     tags: ['PyTorch', 'OpenCV', 'Python', 'CNN', 'Deep Learning'],
-    githubUrl: 'https://github.com/PoulamiBurman',
+    githubUrl: '',
     liveUrl: '#',
     placeholder: false,
   },
