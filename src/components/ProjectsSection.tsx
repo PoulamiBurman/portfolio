@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Plus } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import SectionBlock from './SectionBlock';
 import { Badge } from './ui/badge';
 import { playHover, playClick } from '@/hooks/useSoundEffects';
@@ -38,9 +38,6 @@ const projects = [
     liveUrl: '#',
     placeholder: false,
   },
-  { placeholder: true },
-  { placeholder: true },
-  { placeholder: true },
 ];
 
 type Project = {
@@ -66,30 +63,7 @@ const ProjectsSection = () => (
       }}
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 pb-12"
     >
-      {(projects as Project[]).map((project, index) => {
-        if (project.placeholder) {
-          return (
-            <motion.div
-              key={`placeholder-${index}`}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-              }}
-              className="w-full h-full"
-            >
-              <div className="w-full h-full group relative border-2 border-black/20 border-dashed px-6 py-10 flex flex-col items-center justify-center shadow-none bg-transparent rounded-none min-h-[480px] transition-all duration-500 hover:border-black/40">
-                <Plus className="w-8 h-8 text-foreground/15 mb-4 group-hover:text-foreground/30 transition-colors" />
-                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/25 group-hover:text-foreground/40 transition-colors text-center">
-                  // Coming Soon
-                </p>
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-foreground/20 group-hover:text-foreground/30 transition-colors text-center mt-1">
-                  Next project loading...
-                </p>
-              </div>
-            </motion.div>
-          );
-        }
-
+      {projects.map((project) => {
         return (
           <motion.div
             key={project.title}
