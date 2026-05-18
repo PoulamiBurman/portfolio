@@ -34,7 +34,7 @@ The project has **no backend** — it is a purely static, client-side React appl
 ```
 AnisPort/
 ├── public/               # Static assets served as-is
-│   ├── favicon.png
+│   ├── favicon-new.png
 │   ├── resume.pdf        # Downloadable resume
 │   ├── robots.txt
 │   └── images/
