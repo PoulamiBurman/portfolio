@@ -183,16 +183,3 @@ src/
 - [ ] **Dark Mode 2.0**: Advanced themes with custom color palettes.
 
 ---
-
-## 🏆 Achievements
-
-- **Freelance Excellence**: Successfully delivered a full-stack client project for the Academy of Tech Masters (AOTMS).
-- **Project Scale**: 10+ Production-ready applications showcased, ranging from AI Emailers to Blockchain Navigators.
-
----
-
-<div align="center">
-  <h3><b>Let's Build Something Exceptional Together.</b></h3>
-  <p>pappuridurgavaraprasad4pl@gmail.com</p>
-  <p>© 2026 Durga Vara Prasad. Built with 🤍 and Coffee.</p>
-</div>
